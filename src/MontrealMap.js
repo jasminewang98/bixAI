@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom"
+import ReactDOM from "react-dom";
 import Map from "google-maps-react";
 
 class MontrealMap extends Component {
@@ -11,7 +11,7 @@ class MontrealMap extends Component {
   loadMap() {
     if (this.props && this.props.google) {
       // google is available
-      const {google} = this.props;
+      const { google } = this.props;
       const maps = google.maps;
 
       const mapRef = this.refs.map;
@@ -21,15 +21,18 @@ class MontrealMap extends Component {
       let lat = 37.774929;
       let lng = -122.419416;
       const center = new maps.LatLng(lat, lng);
-      const mapConfig = Object.assign({}, {
-        center: center,
-        zoom: zoom
-      })
+      const mapConfig = Object.assign(
+        {},
+        {
+          center: center,
+          zoom: zoom
+        }
+      );
       this.map = new maps.Map(node, mapConfig);
     }
   }
   render() {
-    return <div ref="montrealMap">highz</div>;
+    return <div ref="montrealMap" />;
   }
 }
 
