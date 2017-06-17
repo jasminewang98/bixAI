@@ -3,6 +3,7 @@ import logo from './Bixi_logo.svg';
 import './App.css';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -14,6 +15,8 @@ class App extends Component {
           <p> 
           </p>
         </div>
+        <div className="Map">
+        </div> 
       </div>
     );
   }
