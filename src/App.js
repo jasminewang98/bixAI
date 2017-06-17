@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
-import logo from './Bixi_logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Map from "google-maps-react";
+
+import MontrealMap from "./MontrealMap"
+import logo from "./Bixi_logo.svg";
+import "./App.css";
 
 class App extends Component {
-
   render() {
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Bix.ai</h2>
         </div>
-        <div className="Search-bar">
-          <p> 
-          </p>
+        <div className="content">
+          <Map google={this.props.google} />
         </div>
-        <div className="Map">
-        </div> 
       </div>
     );
   }
