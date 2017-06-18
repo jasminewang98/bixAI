@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  <link href="http://overpass-30e2.kxcdn.com/overpass.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="panel-col">
+
+      <span id="directions-one" class="directions"> Directions from your origin to the nearest Citi Bike pick-up station:</span>
+      <div class="turnbyturn" id="one"> </div>
+      <span id="directions-two" class="directions"> Directions to your Citi Bike drop-off station:</span>
+      <div class="turnbyturn" id="two"> </div>
+      <span class="directions"> Directions to your destination from your Citi Bike drop-off station:</span>
+      <div class="turnbyturn" id="three"> </div>
+
+    </div>
+
+    <div id="map-col">
+
+      <div id="controls">
+
+        <div id="inputs">
+          <input type="input" id="start" placeholder="Enter a start address">
+          <input type="input" id="end" placeholder="Enter a destination address">
+        </div>
+
+        <div id="button-col">
+          <button type="button" id="submit">Find directions!</button>
+
+          <div>For best results, limit your search to the street address only (including placenames may deliver erroneous results)</div>
+
+        </div>
+
+      </div>
+
+      <div id="map-canvas"></div>
+    </div>
+  </div>
+
+  <script id="directions-template-one" type="text/x-handlebars-template">
+    <span>Your pick-up Citi Bike station is: {{originName}}, <strong>{{numBikes}}</strong> bikes now available.</span>
+  </script>
+
+  <script id="directions-template-two" type="text/x-handlebars-template">
+    <span>Your drop-off Citi Bike station is: {{destinationName}}, <strong>{{numSlots}}</strong> docking stations now available.</span>
+  </script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src="app.js"></script>
+  <script async defer src="http://maps.google.com/maps/api/js?libraries=places&callback=initMap"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuY3Hob2HdyoOflnZgKC2NadKGlylP1zY&callback=initMap">
+    </script>
+</body>
+
+</html>
