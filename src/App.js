@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import Map from "google-maps-react";
 
 import MontrealMap from "./MontrealMap"
 import logo from "./Bixi_logo.svg";

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-//import Map from "google-maps-react";
 
 class MontrealMap extends React.Component {
   componentDidUpdate(prevProps, prevState) {
@@ -33,7 +32,7 @@ class MontrealMap extends React.Component {
   render() {
     return (
       <div ref='map'>
-        Loading map...
+        Loading map from MontrealMap.js...
       </div>
     );
   }
