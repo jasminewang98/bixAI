@@ -6,12 +6,18 @@ export class Container extends React.Component {
     if (!this.props.loaded) {
       return <div>Loading...</div>
     }
+    const style = {
+      width: '100vw',
+      height: '100vh'
+    }
     return (
-      <div>Map will go here</div>
+      <div style={style}>
+        <Map google={this.props.google} />
+      </div>
     )
   }
 }
 
 export default GoogleApiComponent({
-  apiKey: 'AIzaSyCuY3Hob2HdyoOflnZgKC2NadKGlylP1zY',
+  apiKey: 'AIzaSyCuY3Hob2HdyoOflnZgKC2NadKGlylP1zY'
 })(Container)

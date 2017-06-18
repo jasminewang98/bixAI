@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Map from "google-maps-react";
+//import Map from "google-maps-react";
 
 import MontrealMap from "./MontrealMap"
 import logo from "./Bixi_logo.svg";
@@ -13,7 +13,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <div className="content">
-          <Map google={this.props.google} />
+          <MontrealMap />
+         {/*} <Map google={this.props.google} /> */}
         </div>
       </div>
     );
